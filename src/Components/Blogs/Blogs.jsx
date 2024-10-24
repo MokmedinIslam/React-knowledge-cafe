@@ -6,14 +6,14 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect( () => {
-        fetch('../../../public/blogs.json')
+        fetch('public/blogs.json')
         .then(res => res.json())
         .then(data => setBlogs(data))
     },[])
 
     return (
-        <div>
-            <h2>Blogs: {blogs}</h2>
+        <div className="md:w-2/3">
+            <h1 className="text-4xl">Blogs: {blogs.length}</h1>
         </div>
     );
 };
